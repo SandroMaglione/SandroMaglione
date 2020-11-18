@@ -1,10 +1,6 @@
-### Hi there, Sandro Maglione here 👋
+### Sandro Maglione here 👋
+**[Twitter](https://twitter.com/SandroMaglione) | [sandromaglione.com](https://www.sandromaglione.com/) | [pub.dev](https://pub.dev/publishers/sandromaglione.com/packages) |  [@nuklex_app](https://nuklex.com/)**
 
-- 🔭 I’m currently working on [@nuklex_app](https://nuklex.com/)
-- 🌱 I’m currently learning VueJs
-- 👯 I’m looking to collaborate on, nothing really, full on [@nuklex_app](https://nuklex.com/)
-- 🤔 I’m looking for help with many things, but I keep going
-- 💬 Ask me about Flutter
-- 📫 How to reach me: [Twitter](https://twitter.com/SandroMaglione), email, [website](https://www.sandromaglione.com/) where you prefer!
-- 😄 Pronouns: Me?
-- ⚡ Fun fact: 2+2=22
+[![Sandro Maglione's github stats](https://github-readme-stats.vercel.app/api?username=sandromaglione&count_private=true&show_icons=true&theme=nightowl)](https://github.com/anuraghazra/github-readme-stats)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sandromaglione&exclude_repo=range-analysis-llvm,RicochetRobots,LinkedList,AsyncTaskInternetConnectionTutorial,RecyclerViewTutorial,Design-Patterns-Implementation,wordit-api,PHP-RESTful-API&langs_count=5&theme=nightowl)](https://github.com/anuraghazra/github-readme-stats)
