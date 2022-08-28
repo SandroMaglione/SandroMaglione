@@ -6,4 +6,10 @@
 
 [![Programming Languages Timeline Sandro Maglione](http://old.sandromaglione.com/ProgrammingLanguages.svg)](https://www.sandromaglione.com/ProgrammingLanguages.svg)
 
-[![Sandro Maglione's github stats](https://github-readme-stats.vercel.app/api?username=sandromaglione&count_private=true&show_icons=true&theme=nightowl)](https://github.com/anuraghazra/github-readme-stats)
+<br />
+
+<div style="display: flex; align-items: center; justify-content: between;">
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=SandroMaglione&show_icons=true&count_private=true&hide_title=false&theme=nightowl" alt="Sandro Maglione's Github Stats" />
+
+<img width="49%" src="https://github-readme-streak-stats.herokuapp.com?user=SandroMaglione&theme=nightowl&date_format=M%20j%5B%2C%20Y%5D" alt="Sandro Maglione's GitHub Streaks" />
+</div>
