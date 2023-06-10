@@ -1,10 +1,19 @@
-## Sandro Maglione here 💻
+# `Sandro Maglione` 👋
 
-**[Twitter](https://twitter.com/SandroMaglione) | [sandromaglione.com](https://www.sandromaglione.com/) | [pub.dev](https://pub.dev/publishers/sandromaglione.com/packages)**
-
-## [`Check out my personal Portfolio with all my projects`](https://portfolio.sandromaglione.com/)
-
-[![Programming Languages Timeline Sandro Maglione](http://old.sandromaglione.com/ProgrammingLanguages.svg)](https://www.sandromaglione.com/ProgrammingLanguages.svg)
+<p>
+       <a href="https://www.sandromaglione.com/">
+    <img alt="website: sandromaglione.com" src="https://img.shields.io/badge/website-sandromaglione.com-blue" target="_blank" />
+  </a>
+    <a href="https://twitter.com/SandroMaglione">
+    <img alt="Twitter: SandroMaglione" src="https://img.shields.io/twitter/follow/SandroMaglione.svg?style=social" target="_blank" />
+  </a>
+   <a href="https://pub.dev/publishers/sandromaglione.com/packages">
+    <img alt="Pub.dev: sandromaglione.com" src="https://img.shields.io/badge/dart-pub.dev-blue?logo=dart" target="_blank" />
+  </a>
+    <a href="https://github.com/SandroMaglione">
+    <img alt="GitHub: SandroMaglione" src="https://img.shields.io/github/followers/SandroMaglione?label=Follow&style=social" target="_blank" />
+  </a>
+</p>
 
 <br />
 
