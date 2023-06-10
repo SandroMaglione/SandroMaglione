@@ -1,4 +1,4 @@
-# `Sandro Maglione` 👋
+# `Sandro Maglione`
 
 <p>
        <a href="https://www.sandromaglione.com/">
@@ -15,10 +15,10 @@
   </a>
 </p>
 
-<br />
+[![My Skills](https://skillicons.dev/icons?i=ts,nextjs,react,tailwind,dart,flutter,supabase,vscode,haskell)](https://www.sandromaglione.com)
 
-<div style="display: flex; align-items: center; justify-content: between;">
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=SandroMaglione&show_icons=true&count_private=true&hide_title=false&theme=nightowl" alt="Sandro Maglione's Github Stats" />
+***
 
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com?user=SandroMaglione&theme=nightowl&date_format=M%20j%5B%2C%20Y%5D" alt="Sandro Maglione's GitHub Streaks" />
-</div>
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sandromaglione&hide=javascript,c%2B%2B,cmake,c,llvm&theme=nightowl)](https://www.sandromaglione.com)
+
+[![Sandro's GitHub stats](https://github-readme-stats.vercel.app/api?username=sandromaglione&theme=nightowl)](https://www.sandromaglione.com)
