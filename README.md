@@ -15,10 +15,8 @@
   </a>
 </p>
 
-[![My Skills](https://skillicons.dev/icons?i=ts,nextjs,react,tailwind,dart,flutter,supabase,vscode,haskell)](https://www.sandromaglione.com)
+[![My Skills](https://skillicons.dev/icons?i=ts,js,react,tailwind,nodejs,pnpm,postgres,dart,flutter,godot)](https://www.sandromaglione.com)
 
 ***
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sandromaglione&hide=javascript,c%2B%2B,cmake,c,llvm&theme=nightowl)](https://www.sandromaglione.com)
 
 [![Sandro's GitHub stats](https://github-readme-stats.vercel.app/api?username=sandromaglione&theme=nightowl)](https://www.sandromaglione.com)
