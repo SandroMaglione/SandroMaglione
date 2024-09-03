@@ -4,6 +4,9 @@
        <a href="https://www.sandromaglione.com/">
     <img alt="website: sandromaglione.com" src="https://img.shields.io/badge/website-sandromaglione.com-blue" target="_blank" />
   </a>
+              <a href="https://typeonce.dev/">
+    <img alt="courses: typeonce.dev" src="https://img.shields.io/badge/website-typeonce.dev-blue" target="_blank" />
+  </a>
     <a href="https://twitter.com/SandroMaglione">
     <img alt="Twitter: SandroMaglione" src="https://img.shields.io/twitter/follow/SandroMaglione.svg?style=social" target="_blank" />
   </a>
