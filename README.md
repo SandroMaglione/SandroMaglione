@@ -18,7 +18,7 @@
   </a>
 </p>
 
-[![My Skills](https://skillicons.dev/icons?i=ts,js,react,tailwind,nodejs,pnpm,postgres,dart,flutter,godot)](https://www.sandromaglione.com)
+[![My Skills](https://skillicons.dev/icons?i=ts,js,react,tailwind,nodejs,pnpm,postgres,dart,godot)](https://www.sandromaglione.com)
 
 ***
 
