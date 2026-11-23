@@ -12,7 +12,7 @@ import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "nod
 import { createRequire } from "node:module"
 import { tmpdir } from "node:os"
 import { join } from "node:path"
-import { siDiscord, siLinkedin, siX } from "simple-icons"
+import { siDiscord, siX } from "simple-icons"
 import { iconShapes, wordmarkBox, wordmarkDot, wordmarkLetterShapes } from "./sources/ritmo/generate.mjs"
 import { pose, timing } from "./sources/ritmo/motion-model.mjs"
 
@@ -177,27 +177,27 @@ const ritmoScene = (color, dot) => {
 }
 
 const ritmo = (theme) => {
-  const height = 290
+  const height = 298
   const skin = theme.ritmo
   const scene = ritmoScene(skin.fg, theme.tick)
   const scale = .88
   return svg(FULL, height, "Ritmo: the all-in-one toolkit for agent-first game development",
     `<defs>${cardClip("c", FULL, height)}</defs>` + card(FULL, height, { bg: skin.bg, border: skin.line }) +
-    `<g clip-path="url(#c)">${grid(PAD + 380, PAD, 454, 280, 28, theme, "g")}` +
-    `<g transform="translate(${PAD + 34} ${height - PAD - 36 - 94 * scale}) scale(${scale})">${scene.body}</g></g>` +
+    `<g clip-path="url(#c)">${grid(PAD + 380, PAD, 454, 308, 28, theme, "g")}` +
+    `<g transform="translate(${PAD + 34} ${height - PAD - 42 - 94 * scale}) scale(${scale})">${scene.body}</g></g>` +
     lines(["The all-in-one toolkit", "for agent-first", "game development"], { x: 474, y: 112, leading: 41, size: 32, weight: 600, fill: skin.fg, tracking: -.015 }) +
-    text("@typeonce/ritmo", { x: 474, y: height - PAD - 40, size: 20, weight: "mono", fill: skin.muted }),
+    text("@typeonce/ritmo", { x: 474, y: height - PAD - 46, size: 20, weight: "mono", fill: skin.muted }),
     scene.style)
 }
 
 // ---------------------------------------------------------------- effect
 
 const effect = (theme) => {
-  const height = 274
+  const height = 290
   const paths = effectPaths.map((d) => `<path fill-rule="evenodd" fill="${theme.fg}" d="${d}"/>`).join("")
-  const tile = 116
-  const gap = 11
-  const top = 141
+  const tile = 112
+  const gap = 12
+  const top = 148
   const stroke = `fill="none" stroke="${theme.fg}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"`
   // 48x48 glyphs, one per contributed module.
   const glyphs = {
@@ -206,28 +206,28 @@ const effect = (theme) => {
     Permissions: `<g ${stroke}><path d="M24 5 40 11v12c0 10-6.5 17-16 20.500C14.500 40 8 33 8 23V11z"/><path d="m16.5 24 5.5 5.5 10-11"/></g>`
   }
   const tiles = Object.entries(glyphs).map(([name, glyph], index) => {
-    const x = PAD + 21 + index * (tile + gap)
+    const x = PAD + 26 + index * (tile + gap)
     return `<rect x="${x + .5}" y="${top + .5}" width="${tile - 1}" height="104" rx="9" fill="${theme.raised}" stroke="${theme.line}"/>` +
       `<g transform="translate(${x + tile / 2 - 24} ${top + 15})">${glyph.replaceAll(theme.surface, theme.raised)}</g>` +
       text(name, { x: x + tile / 2, y: top + 88, size: 14.5, weight: "mono", fill: theme.muted, anchor: "middle" })
   }).join("")
   return svg(HALF, height, "Effect contributor: Trie, IndexedDb and Permissions modules",
     card(HALF, height, { bg: theme.surface, border: theme.line }) +
-    `<g transform="translate(${PAD + 21} 27) scale(.345)">${paths}</g>` +
-    text("Contributor. Modules I added:", { x: PAD + 22, y: 116, size: 17.5, fill: theme.muted }) +
+    `<g transform="translate(${PAD + 26} 31) scale(.345)">${paths}</g>` +
+    text("Contributor. Modules I added:", { x: PAD + 27, y: 121, size: 17.5, fill: theme.muted }) +
     tiles)
 }
 
 // --------------------------------------------------------- effect-machine
 
 const machine = (theme) => {
-  const height = 274
+  const height = 290
   const cycle = 6000
   const w = 124
   const h = 54
-  const y = 163
-  const a = PAD + 22
-  const b = HALF - PAD - 22 - w
+  const y = 168
+  const a = PAD + 26
+  const b = HALF - PAD - 26 - w
   const mid = HALF / 2
   const bend = 50
   const top = `M${a + w / 2} ${y}C${a + w / 2} ${y - bend} ${b + w / 2} ${y - bend} ${b + w / 2} ${y - 2}`
@@ -252,9 +252,9 @@ const machine = (theme) => {
     `.t2{animation:t2 ${cycle}ms linear infinite}@keyframes t2{0%,74%{stroke-dashoffset:22;opacity:0}74.1%{opacity:1}86%{stroke-dashoffset:-220;opacity:1}86.1%,100%{stroke-dashoffset:-220;opacity:0}}`
   return svg(HALF, height, "Effect Machine: schema-first state machines and statecharts for Effect",
     card(HALF, height, { bg: theme.surface, border: theme.line }) +
-    `<path transform="translate(${PAD + 22} 32) scale(.0756)" fill="${theme.fg}" d="${pixelFreeMark}"/>` +
-    text("effect-machine", { x: PAD + 68, y: 58, size: 28, weight: 600, fill: theme.fg, tracking: -.015 }) +
-    text("Schema-first statecharts for Effect", { x: PAD + 22, y: 94, size: 17.5, fill: theme.muted }) +
+    `<path transform="translate(${PAD + 26} 36) scale(.0756)" fill="${theme.fg}" d="${pixelFreeMark}"/>` +
+    text("effect-machine", { x: PAD + 72, y: 62, size: 28, weight: 600, fill: theme.fg, tracking: -.015 }) +
+    text("Schema-first statecharts for Effect", { x: PAD + 27, y: 99, size: 17.5, fill: theme.muted }) +
     `<g fill="none" stroke="${theme.strong}" stroke-width="2"><path d="${top}"/><path d="${bottom}"/></g>` +
     arrow(b + w / 2, y, 1) + arrow(a + w / 2, y + h, -1) +
     `<g fill="none" stroke="${theme.violet}" stroke-width="3.5" stroke-linecap="round"><path class="t t1" d="${top}"/><path class="t t2" d="${bottom}"/></g>` +
@@ -268,48 +268,74 @@ const pixelFreeMark = "M0 181A181 181 0 0 1 181 0H440A10 10 0 0 1 450 10A96 96 0
 // ----------------------------------------------------------------- games
 
 const games = (theme) => {
-  const height = 152
+  const height = 162
   const skin = theme.games
   return svg(FULL, height, "Typeonce Games: original games for web, mobile, and desktop",
     `<defs>${cardClip("c", FULL, height)}</defs>` + card(FULL, height, { bg: skin.bg, border: skin.line }) +
     `<g clip-path="url(#c)">${grid(PAD + 380, PAD, 454, 160, 8, theme, "g")}</g>` +
-    `<path transform="translate(${PAD + 34} 35)" shape-rendering="crispEdges" fill="${skin.fg}" d="${pixels(typeonce.wordmark, 2.5)}"/>` +
-    lines(["Original games,", "playable in your browser"], { x: 474, y: 70, leading: 36, size: 27, weight: 600, fill: skin.fg, tracking: -.012 }))
+    `<path transform="translate(${PAD + 34} 41)" shape-rendering="crispEdges" fill="${skin.fg}" d="${pixels(typeonce.wordmark, 2.5)}"/>` +
+    lines(["Original games for", "web, mobile, and desktop"], { x: 474, y: 74, leading: 36, size: 27, weight: 600, fill: skin.fg, tracking: -.012 }))
+}
+
+/** A source image as a data URI, at most `width` pixels wide. */
+const embed = (file, width, work) => {
+  const png = join(work, "embed.png")
+  execFileSync("ffmpeg", ["-v", "error", "-y", "-i", join(here, "sources/games", file), "-vf", `scale='min(${width},iw)':-2:flags=lanczos`, png])
+  return `data:image/png;base64,${readFileSync(png).toString("base64")}`
+}
+
+/** Game cards carry a screenshot, so they are rasterised at 3x. */
+const rasterise = (name, content, work) => {
+  const source = join(work, "card.svg")
+  const raster = join(work, "card.png")
+  writeFileSync(source, content)
+  execFileSync("rsvg-convert", ["--unlimited", "-z", "3", source, "-o", raster])
+  execFileSync("cwebp", ["-quiet", "-q", "86", "-alpha_q", "100", "-sharp_yuv", raster, "-o", join(out, `${name}.webp`)])
+}
+
+/** The featured game: full width, with its own title art over the track. */
+const feature = (theme, mode, work) => {
+  const height = 318
+  const ink = "#14161a"
+  const gold = "#f7b733"
+  const left = PAD + 34
+  const chip = line("Upcoming", { size: 18, weight: 600, fill: gold })
+  rasterise(`game-tabletop-champions-${mode}`, svg(FULL, height, "Tabletop Champions",
+    `<defs>${cardClip("c", FULL, height)}<linearGradient id="s" x1="0" x2="1"><stop offset=".24" stop-color="${ink}"/><stop offset=".42" stop-color="${ink}" stop-opacity=".9"/><stop offset=".78" stop-color="${ink}" stop-opacity="0"/></linearGradient></defs>` +
+    card(FULL, height, { bg: ink, border: theme.games.line }) +
+    `<g clip-path="url(#c)"><image x="184" y="-92" width="834" height="469" href="${embed("tabletop-champions.webp", 1920, work)}"/>` +
+    `<rect width="${FULL}" height="${height}" fill="url(#s)"/></g>` +
+    `<image x="${left}" y="44" width="402" height="81" href="${embed("tabletop-champions-title.png", 1200, work)}"/>` +
+    text("Drift toy cars round a tabletop.", { x: left, y: 176, size: 25, weight: 600, fill: "#ffffff", tracking: -.01 }) +
+    text("Master every circuit. Win every car.", { x: left, y: 209, size: 20, fill: "#b9bec7" }) +
+    `<rect x="${left + .75}" y="236.75" width="${n(chip.width + 28)}" height="36" rx="5" fill="none" stroke="${gold}" stroke-width="1.5"/>` +
+    text("Upcoming", { x: left + 14.75, y: 261, size: 18, weight: 600, fill: gold })), work)
 }
 
 const titles = [
   ["inkline-town", "Inkline Town", "Town builder"],
-  ["spirit-call", "Spirit Call", "Top-down action"],
-  ["still-time", "Still Time", "One-hit assassin"]
+  ["spirit-call", "Spirit Call", "Top-down action"]
 ]
 
-/** Game tiles carry a screenshot, so they are rasterised at 3x. */
 const tile = ([id, name, genre], theme, mode, work) => {
-  const height = 236
   const skin = theme.games
-  const inner = THIRD - PAD * 2
+  const inner = HALF - PAD * 2
   const shot = Math.round(inner * 9 / 16)
-  const png = join(work, `${id}.png`)
-  execFileSync("ffmpeg", ["-v", "error", "-y", "-i", join(here, `sources/games/${id}.webp`), "-vf", `scale=${inner * 3}:-2:flags=lanczos`, png])
-  const image = readFileSync(png).toString("base64")
-  const source = join(work, "tile.svg")
-  writeFileSync(source, svg(THIRD, height, name,
-    `<defs>${cardClip("c", THIRD, height)}</defs>` + card(THIRD, height, { bg: skin.bg, border: skin.line }) +
-    `<g clip-path="url(#c)"><image x="${PAD}" y="${PAD}" width="${inner}" height="${shot}" preserveAspectRatio="xMidYMid slice" href="data:image/png;base64,${image}"/></g>` +
+  const height = PAD * 2 + shot + 88
+  rasterise(`game-${id}-${mode}`, svg(HALF, height, name,
+    `<defs>${cardClip("c", HALF, height)}</defs>` + card(HALF, height, { bg: skin.bg, border: skin.line }) +
+    `<g clip-path="url(#c)"><image x="${PAD}" y="${PAD}" width="${inner}" height="${shot}" preserveAspectRatio="xMidYMid slice" href="${embed(`${id}.webp`, 1280, work)}"/></g>` +
     `<path d="M${PAD + 1} ${PAD + shot + .5}h${inner - 2}" stroke="${skin.line}"/>` +
-    text(name, { x: PAD + 16, y: PAD + shot + 33, size: 21, weight: 600, fill: skin.fg, tracking: -.01 }) +
-    text(genre, { x: PAD + 16, y: PAD + shot + 58, size: 17, fill: skin.muted })))
-  const raster = join(work, "tile.png")
-  execFileSync("rsvg-convert", ["--unlimited", "-z", "3", source, "-o", raster])
-  execFileSync("cwebp", ["-quiet", "-q", "86", "-alpha_q", "100", "-sharp_yuv", raster, "-o", join(out, `game-${id}-${mode}.webp`)])
+    text(name, { x: PAD + 26, y: PAD + shot + 39, size: 23, weight: 600, fill: skin.fg, tracking: -.01 }) +
+    text(genre, { x: PAD + 26, y: PAD + shot + 65, size: 18, fill: skin.muted })), work)
 }
 
 // --------------------------------------------------------------- writing
 
 const writing = (theme) => {
-  const height = 236
-  const x = 534
-  const top = 34
+  const height = 244
+  const x = 520
+  const top = 42
   // Each row is a list of [color, width] runs: prose, then a code block, then prose.
   const prose = theme.strong
   const rows = [
@@ -346,17 +372,17 @@ const writing = (theme) => {
     `<defs>${cardClip("c", FULL, height)}</defs>` + card(FULL, height, { bg: theme.surface, border: theme.line }) +
     `<g clip-path="url(#c)">${grid(PAD + 380, PAD, 454, 240, 28, theme, "g")}` +
     `<rect x="${x + .5}" y="${top + .5}" width="291" height="260" rx="12" fill="${theme.surface}" stroke="${theme.line}"/>${body}</g>` +
-    text("sandromaglione.com", { x: PAD + 34, y: 90, size: 41, weight: 600, fill: theme.fg, tracking: -.022 }) +
-    lines(["Long-form guides and a newsletter,", "written from real projects"], { x: PAD + 35, y: 144, leading: 36, size: 25, fill: theme.muted }) +
+    text("sandromaglione.com", { x: PAD + 34, y: 93, size: 41, weight: 600, fill: theme.fg, tracking: -.022 }) +
+    lines(["Long-form guides and a newsletter,", "written from real projects"], { x: PAD + 35, y: 147, leading: 36, size: 25, fill: theme.muted }) +
     "", style)
 }
 
 // ---------------------------------------------------------------- social
 
 const social = (icon, theme) =>
-  svg(56, 56, icon.title,
-    `<rect x="5.5" y="5.5" width="45" height="45" rx="11" fill="${theme.surface}" stroke="${theme.line}"/>` +
-    `<path transform="translate(18 18) scale(.8333)" fill="${theme.fg}" d="${icon.path}"/>`)
+  svg(56, 64, icon.title,
+    `<rect x="5.5" y="13.5" width="45" height="45" rx="11" fill="${theme.surface}" stroke="${theme.line}"/>` +
+    `<path transform="translate(18 26) scale(.8333)" fill="${theme.fg}" d="${icon.path}"/>`)
 
 // ------------------------------------------------------------------ main
 
@@ -370,8 +396,8 @@ for (const [mode, theme] of Object.entries(themes)) {
   save("typeonce-games", games(theme))
   save("sandromaglione", writing(theme))
   save("x", social(siX, theme))
-  save("linkedin", social(siLinkedin, theme))
   save("discord", social(siDiscord, theme))
+  feature(theme, mode, work)
   for (const title of titles) tile(title, theme, mode, work)
 }
 rmSync(work, { recursive: true })
